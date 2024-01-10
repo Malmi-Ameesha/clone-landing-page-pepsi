@@ -10,7 +10,7 @@
 <body>
     <section class="sec">
         <header>
-            <!-- <a href="#"><img src="logo.png" class="logo"></a> -->
+            <a href="#"><img src="logo.png" class="logo"></a>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Products</a></li>
@@ -19,6 +19,36 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's What<br><span>I like</span></h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut dignissimos praesentium quae, recusandae odio nulla rem tempore neque fuga veritatis vel possimus quod iure sed consequatur labore! Nisi, dignissimos reprehenderit!
+                  <a href="#">View All Products</a>  
+                </p>
+            </div>
+            <div class="imgBox">
+                <img src="pepsi001.png" class="Pepsi">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="pepsi001.png" onclick="imgSlider('pepsi001.png');changeBgColor('#0062be')"></li>
+            <li><img src="pepsi002.png" onclick="imgSlider('pepsi002.png');changeBgColor('#e60c2c')"></li>
+            <li><img src="pepsi003.png" onclick="imgSlider('pepsi003.png');changeBgColor('#1e1e1e')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png"></a></li>
+            <li><a href="#"><img src="twitter.png"></a></li>
+            <li><a href="#"><img src="instagram.png"></a></li>
+        </ul>
     </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.Pepsi').src= anything;
+        }
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+    </script>
 </body>
 </html>
